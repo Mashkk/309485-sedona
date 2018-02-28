@@ -4,44 +4,48 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheets">
-    <link href="css/style.css" rel="stylesheets">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body class="inner-page">
-    <header class="main-header">
+    <div class="container">
+      <header class="main-header container">
+        <nav class="main-navigation-header">
 
-      <nav class="main-navigation-header">
+          <div class="site-navigation">
+            <ul class="site-navigation__left-list">
+              <li>
+                <a href="#">Информация</a>
+              </li>
+              <li>
+                <a href="#">Фото и видео</a>
+              </li>
+            </ul>
 
-        <a class="main-logo logo-header" href="#">
-          <span class="visually-hidden">Логотип компании Sedona</span>
-          <img class="logo-header-img" src="img/logo.svg" alt="Sedona" width="68" height="56">
-        </a> 
+            <a class="main-logo logo-header" href="#">
+              <span class="visually-hidden">Логотип компании Sedona</span>
+              <img class="logo-header-img" src="img/logo.svg" alt="Sedona" width="68" height="56">
+            </a> 
 
-        <ul class="sait-navigation-header">
-          <li>
-            <a href="#">Информация</a>
-          </li>
-          <li>
-            <a href="#">Фото и видео</a>
-          </li>
-          <li>
-            <a href="#">Карта штата</a>
-          </li>
-          <li>
-            <a href="#">Гостиницы</a>
-          </li>
-        </ul>
-      </nav>
+            <ul class="site-navigation__right-list">
+              <li>
+                <a href="#">Карта штата</a>
+              </li>
+              <li>
+                <a href="#">Гостиницы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-      <div class="main-intro">
-        <img class="main-photo" src="img/main-photo.png" alt="Welcome to Sedona" width="1200" height="520">
-        <img class="intro-text" src="img/intro-text.png" alt="Because the Grand Canyon is sucks!" width="1200" height="520">
-      </div>
-    </header>
+        <div class="main-intro">
+          <img class="main-photo" src="img/main-photo.png" alt="Welcome to Sedona" width="1200" height="520">
+          <img class="intro-text" src="img/intro-text.png" alt="Because the Grand Canyon is sucks!" width="1200" height="520">
+        </div>
+      </header>
 
-    <main>
-      <div class="container">
-        
+      <main>
         <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
 
         <section class="advantages">
@@ -117,12 +121,9 @@
           <iframe src="#"></iframe>
           <img class="map_img" src="#" alt="Седона" width="1200" height="560">
         </section>
-      </div>
-    </main>
+      </main>
 
-    <footer>
-      <div class="container">
-
+      <footer>
         <div class="footer-wrapper">
 
           <span class="heshteg">
@@ -158,8 +159,8 @@
             </a>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <section class="modal-window">
       <h2 class="visually-hidden">Подбор гостиницы</h2>
