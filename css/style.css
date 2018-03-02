@@ -20,6 +20,7 @@ body {
   margin: 0 auto;
 
   background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -45,46 +46,111 @@ input[type="radio"]:disabled {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/*списки*/
+.site-navigation__list li {
+  list-style: none outside;
+}
 
-.site-navigation {
+.site-navigation__list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  align-items: baseline;
 
   width: 100%;
   height: 56px;
+
+  margin: 0;
+  padding: 0;
 }
 
-  .site-navigation ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-
-    width: 40%;
-  
-    margin: 0;
-    padding: 0;
+  .site-navigation__list li {
+    width: 20%;
   }
-  
-  ul.site-navigation__right-list {
-      justify-content: flex-end;
-      text-align: right;
 
-      margin-right: 6%;
-    }
-
-  ul.site-navigation__left-list {
+  .site-navigation__list li:nth-child(1) {
     margin-left: 6%;
   }
 
-    .site-navigation li {
-      list-style: none outside;
-      width: 50%;
+  .site-navigation__list li:nth-child(2) {
+    margin-right: 66px;
+  }
+
+  .site-navigation__list li:nth-child(3),
+  .site-navigation__list li:nth-child(4) {
+    text-align: right;
+    margin-right: 0;
+  }
+
+  .site-navigation__list li:nth-child(4) {
+    margin-right: 6%;
+  }
+
+  .site-navigation__list a {
+    text-decoration: none;
+    font: 700 14px/1.86 "PT Sans", Arial, Helvetica, sans-serif;
+    color: #000;
+  }
+
+/*конец шапки*/
+
+.intro-text {
+  width: 576px;
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+.intro-text > b {
+  font: 700 21px/1.86 "PT Sans", Arial, Helvetica, sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.intro-text h2 {
+  font: inherit;
+}
+
+.block-size__l {
+  display: flex;
+  max-width: 1200px;
+  min-width: 768px;
+}
+
+  .promo-text__l {
+    width: 33%;
+    background-color: #81b3d2;
+
+    color: #fff;
+  }
+
+    .promo-text__wrapper {
+      max-width: 76.3%;
+      margin: 0 auto;
+
+      text-align: center;
     }
 
-      .site-navigation a {
-        font-weight: 700;
-        color: #333;
-        text-decoration: none;
-      }
+    h3 {
+      margin: 0;
+    }
+
+    .promo-text__description {
+      margin: 0;
+    }
+
+  .advantage-img__wrapper {
+    display: flex;
+    align-items: center;
+    width: 67%;
+    height: 256px;
+
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+    
