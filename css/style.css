@@ -220,7 +220,7 @@ img {
 
   .advantage-img__wrapper {
     width: 67%;
-    min-height: 256px;
+    height: 256px;
     
     overflow: hidden;
   }
