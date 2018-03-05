@@ -68,12 +68,12 @@ img {
   
   margin: 0;
   padding: 0;
-  padding-top: 22px;
+  padding-top: 10px;
 }
 
   .site-navigation__list li {
     width: 20%;
-    padding-bottom: 22px;
+    padding-bottom: 10px;
   }
 
   .site-navigation__list li:nth-child(1) {
@@ -100,6 +100,17 @@ img {
     color: #000;
   }
 
+    .site-navigation__list a:hover,
+    .site-navigation__list a:focus {
+      color: #81b3d2;
+      outline: none;
+    }
+
+    .site-navigation__list a:active,
+    .site-navigation__list a.is-active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
 /* Лого */
 .main-navigation-header {
   position: relative;
@@ -109,6 +120,7 @@ img {
     position: absolute;
     top: 0;
     left: 50%;
+    z-index: 1;
 
     transform: translateX(-50%);
   }
@@ -218,9 +230,8 @@ img {
       margin: 0;
     }
 
-  .advantage-img__wrapper {
-    width: 67%;
-    height: 256px;
+  .block-size__l .img_size__l {
+   
     
     overflow: hidden;
   }
