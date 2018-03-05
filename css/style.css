@@ -47,11 +47,6 @@ input[type="radio"]:disabled {
   overflow: hidden;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 /*списки*/
 .site-navigation__list li,
 .small-advantages-list li {
@@ -123,6 +118,11 @@ img {
     z-index: 1;
 
     transform: translateX(-50%);
+  }
+
+  .logo-header-img {
+    width: 100%;
+    height: auto;
   }
 
 /* Фото */
@@ -198,12 +198,11 @@ img {
 /*Оформление большого блока*/
 .block-size__l {
   display: flex;
-  max-width: 1200px;
-  min-width: 768px;
+  justify-content: space-between;
 }
 
   .promo-text__l {
-    width: 33%;
+    width: 34%;
     background-color: #81b3d2;
 
     color: #fff;
@@ -217,7 +216,7 @@ img {
       text-align: center;
     }
 
-    .promo-text__wrapper h3 {
+    h3 {
       font: 700 21px/1 "PT Sans", Arial, Helvetica, sans-serif;
       text-align: center;
 
@@ -230,12 +229,25 @@ img {
       margin: 0;
     }
 
-  .block-size__l .img_size__l {
-   
-    
+  .img-size__l__wrapper {
+    position: relative;
+
+    width: 67%;
+    height: auto;
+
     overflow: hidden;
   }
 
+    .img-size__l {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+   
+    
+    
 
 /*Оформление маленького списка*/
 .small-advantages-list {
