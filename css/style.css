@@ -518,6 +518,16 @@ input[type="radio"]:disabled {
       text-align: center;
     }
 
+      .social a:hover,
+      .social a:focus {
+        background-color: #669ec0;
+        outline: none;
+      }
+
+      .social a:active {
+        background-color: #5496bd;
+      }
+
     .social img {
       position: absolute;
 
@@ -547,4 +557,14 @@ input[type="radio"]:disabled {
       height: 46px;
 
       margin-top: 2px;
+    }
+
+    .academy-link:hover .logo-academy,
+    .academy-link:focus .logo-academy {
+      fill: #81b3d2;
+      outline: none;
+    }
+
+    .logo-academy:active {
+      fill: #bdbbbc;
     }
