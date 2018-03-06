@@ -58,15 +58,48 @@ input[type="radio"]:disabled {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  justify-content: space-between;
 
   width: 100%;
   
   margin: 0;
-  padding: 0;
-  padding-top: 10px;
+  padding: 0 6%;
 }
 
-  .site-navigation__list li {
+  .site-navigation__list .left-column,
+  .site-navigation__list .right-column {
+    width: 50%;
+  }
+
+  .site-navigation__list ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    margin: 0;
+    padding: 0;
+  }
+
+    .left-column li,
+    .right-column li {
+      width: 45.6%;
+
+      padding: 14px 0 16px;
+    }
+
+  .right-column ul {
+    justify-content: flex-end;
+  }
+
+  .right-column li {
+    text-align: right;
+  }
+
+  .right-column li:nth-child(odd) {
+    padding-right: 2px;
+  }
+
+  /* .site-navigation__list li {
     width: 20%;
     padding-bottom: 10px;
   }
@@ -87,7 +120,7 @@ input[type="radio"]:disabled {
 
   .site-navigation__list li:nth-child(4) {
     margin-right: 6%;
-  }
+  } */
 
   .site-navigation__list a {
     text-decoration: none;
@@ -255,6 +288,8 @@ input[type="radio"]:disabled {
   flex-wrap: wrap;
   align-items: center;
 
+  position: relative;
+
   width: 100%;
 
   margin: 55px 0;
@@ -281,6 +316,22 @@ input[type="radio"]:disabled {
     .small-advantages-list p {
       text-align: center;
     }
+
+  .small-advantage::before {
+    content: "";
+    position: absolute;
+
+    top:0;
+    left: 0;
+  }
+
+  .small-advantage.home {
+    width: 75px;
+    height: 72px;
+
+    background: url(../img/icon-1.svg) center no-repeat;
+
+  }
 
 /* Оформление маленьких блоков */
 .block-size__s__wrapper {
