@@ -555,6 +555,7 @@ input[type="radio"]:disabled {
     .logo-academy {
       width: 115px;
       height: 46px;
+      fill: #000;
 
       margin-top: 2px;
     }
@@ -565,6 +566,6 @@ input[type="radio"]:disabled {
       outline: none;
     }
 
-    .logo-academy:active {
+    .academy-link:active .logo-academy {
       fill: #bdbbbc;
     }
