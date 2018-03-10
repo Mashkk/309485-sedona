@@ -580,6 +580,8 @@ input[type="radio"]:disabled {
   width: 100%;
   min-height: 218px;
 
+  padding: 28px 72px;
+
   background: url(../img/filter-background.jpg) center no-repeat;
   background-size: 1200px 562px;
 
@@ -592,31 +594,25 @@ input[type="radio"]:disabled {
   flex-wrap: wrap;
 
   width: 528px;
-
-  padding-left: 72px;
 }
+
+  fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+  } 
 
   .filter-infrastructure,
   .filter-accommodation {
     width: 210px;
 
-    margin-right: 15px;
+    margin-right: 45px;
   }
 
-  fieldset {
-    padding: 0;
-    border: none;
-  } 
-
     .filter-name {
+      padding-bottom: 25px;
       font: 700 16px/1.3 "PT Sans", Arial, Helvetica, sans-serif;
     }
-
-.filter-price {
-  width: 328px;
-
-  margin-right: 72px;
-}
 
   .filter-list {
     margin: 0;
@@ -625,7 +621,180 @@ input[type="radio"]:disabled {
 
     .filter-list li {
       padding: 0;
+      padding-bottom: 25px;
       list-style: none outside;
+    }
+
+    .filter-list li:last-child {
+      padding: 0;
+    }
+
+/* слайдер с ценой */
+.filter-price {
+  width: 318px;
+}
+
+  .filter-price legend {
+    padding-bottom: 10px;
+  }
+
+.price-slider-data__wrapper {
+  display: block;
+  position: relative;
+
+  width: 318px;
+  height: 36px;
+
+  margin-bottom: 20px;
+
+  border: 2px solid #fff;
+  border-radius: 2px;
+}
+
+  .price-slider-data__wrapper::before {
+    content: "";
+    position: absolute;
+
+    top: 5px;
+    left: 50%;
+
+    width: 2px;
+    height: 22px;
+
+    background-color: #fff;
+  }
+
+  .price-slider-data {
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 155px;
+    text-align: center;
+
+    line-height: 36px;
+  }
+
+  .price-slider {
+    position: relative;
+
+    width: 317px;
+    height: 2px;
+
+    margin-bottom: 32px;
+
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+    .price-slider-bar {
+      position: absolute;
+
+      width: 248px;
+      height: 2px;
+
+      background-color: #fff;
+    }
+
+    .price-slider-button {
+      position: absolute;
+
+      top: -10px;
+
+      width: 20px;
+      height: 23px;
+
+      font-size: 0;
+
+      background: url(../img/filter-button.svg) center/20px 23px no-repeat;
+    }
+
+    .price-slider-button-to {
+      left: 253px;
+    }
+
+      .price-slider-button:hover {
+        width: 22px;
+        height: 25px;
+
+        background-size: 22px 25px;
+      }
+
+      .filter-button {
+        display: block;
+
+        min-width: 138px;
+        height: 36px;
+
+        padding: 0;
+        margin: 0 auto;
+
+        color: #fff;
+        text-align: center;
+        line-height: 36px;
+        text-transform: uppercase;
+
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 2px;
+
+        transform: translateX(-4%);
+        cursor: pointer;
+      }
+
+        .filter-button:hover,
+        .filter-button:focus {
+          background-color: #fff;
+          outline: none;
+
+          color: #000;
+        }
+
+        .filter-button:active {
+          color: rgba(0, 0, 0, 0.3);
+        }
+
+/* стили для чекбоксов */
+.filter-list label {
+  position: relative;
+  cursor: pointer;
+
+  padding-left: 39px;
+}
+
+.filter-list input {
+  position: absolute;
+  opacity: 0;
+}
+
+  .filter-list input + label::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    width: 27px;
+    height: 25px;
+  }
+
+    .filter-list input + label::before {
+      background: url("../img/checkbox-off.svg") bottom left/23px 23px no-repeat;
+    }
+
+    .filter-list input:checked + label::before,
+    .filter-list input:active:not(:disabled) + label::before {
+      background: url("../img/checkbox-on.svg") bottom left/27px 23px no-repeat;
+    }
+
+    .filter-list input:checked:active:not(:disabled) + label::before {
+      background: url("../img/checkbox-off.svg") bottom left/23px 23px no-repeat;
+  }
+
+    .filter-list input:disabled + label::before,
+    .filter-list input:checked:disabled + label::before {
+      opacity: 0.3;
+      pointer-events: none;
+      cursor: default;
     }
 
 /* Сортировка */
@@ -769,20 +938,32 @@ input[type="radio"]:disabled {
     }
 
     .hotel-item h3 {
+      padding: 0;
+      margin: 0;
+
+      width: 100%;
+      text-align: left;
+    }
+
+    .hotel-name {
       font: 700 21px/0.8 "PT Sans", Arial, Helvetica, sans-serif;
       color: #000;
 
       width: 100%;
 
-      text-align: left;
-      padding: 0;
       padding-bottom: 10px;
-      margin: 0;
-    }
-
-    .hotel-item a {
       text-decoration: none;
     }
+
+      .hotel-name:hover,
+      .hotel-name:focus {
+        color: #81b3d2;
+        outline: none;
+      }
+
+      .hotel-name:active {
+        color: rgba(0, 0, 0, 0.3);
+      }
 
     .hotel-item span {
       display: inline-block;
@@ -813,6 +994,8 @@ input[type="radio"]:disabled {
       color: #fff;
       font-weight: 700;
       line-height: 27px;
+
+      text-decoration: none;
     }
 
     .more-button {
