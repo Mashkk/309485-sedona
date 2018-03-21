@@ -95,10 +95,14 @@
             <fieldset class="filter-price">
               <legend class="filter-name">Стоимость в сутки (р):</legend>
 
-              <div class="price-slider-data__wrapper">
-                <span class="price-slider-data price-slider-data-from">от 0</span>
-                <span class="price-slider-data price-slider-data-to">до 3000</span>
-              </div>
+              <div class="price-controls">
+                <label class="min-price">От 
+                  <input type="text" name="min-price" value="0" pattern="[0-9]{1,6}">
+                </label>
+                <label class="max-price">До 
+                  <input type="text" name="max-price" value="3000" pattern="[0-9]{1,6}">
+                </label>
+              </div> 
 
               <div class="price-slider">
                 <div class="price-slider-bar"></div>
@@ -106,9 +110,6 @@
                 <div class="price-slider-button price-slider-button-from" tabindex="0">Цена от</div>
                 <div class="price-slider-button price-slider-button-to" tabindex="0">Цена до</div>
               </div>
-
-              <input type="hidden" name="price-from" value="0">
-              <input type="hidden" name="price-to" value="3000">
 
               <button class="filter-button" type="submit" name="filter-button">Показать</button>
             </fieldset>
@@ -137,7 +138,7 @@
               <a class="sorting-pointer sorting-pointer-up" href="#">По возрастанию</a>
             </li>
             <li>
-              <a class="sorting-pointer sorting-pointer-down" href="#">По убыванию</a>
+              <a class="sorting-pointer sorting-pointer-down is-active" href="#">По убыванию</a>
             </li>
           </ul>
         </section>

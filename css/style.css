@@ -1,5 +1,6 @@
 *, *::before, *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -22,7 +23,8 @@ body {
   margin: 0 auto;
 
   background-color: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -49,6 +51,10 @@ input[type="radio"]:disabled {
   overflow: hidden;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*списки*/
 .site-navigation__list li,
 .small-advantages-list li {
@@ -57,10 +63,17 @@ input[type="radio"]:disabled {
 
 /* Меню в шапке */
 .site-navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   width: 100%;
   
@@ -74,9 +87,14 @@ input[type="radio"]:disabled {
   }
 
   .site-navigation__list ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
 
     margin: 0;
     padding: 0;
@@ -90,7 +108,9 @@ input[type="radio"]:disabled {
     }
 
   .right-column ul {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 
   .right-column li {
@@ -100,29 +120,6 @@ input[type="radio"]:disabled {
   .right-column li:nth-child(odd) {
     padding-right: 2px;
   }
-
-  /* .site-navigation__list li {
-    width: 20%;
-    padding-bottom: 10px;
-  }
-
-  .site-navigation__list li:nth-child(1) {
-    margin-left: 6%;
-  }
-
-  .site-navigation__list li:nth-child(2) {
-    margin-right: 66px;
-  }
-
-  .site-navigation__list li:nth-child(3),
-  .site-navigation__list li:nth-child(4) {
-    text-align: right;
-    margin-right: 0;
-  }
-
-  .site-navigation__list li:nth-child(4) {
-    margin-right: 6%;
-  } */
 
   .site-navigation__list a {
     text-decoration: none;
@@ -155,7 +152,11 @@ input[type="radio"]:disabled {
     left: 50%;
     z-index: 1;
 
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+        -ms-transform: translateX(-50%);
+
+            transform: translateX(-50%);
   }
 
   .logo-header-img {
@@ -167,6 +168,8 @@ input[type="radio"]:disabled {
 .main-intro__wrapper {
   width: 100%;
   height: 509px;
+
+  background-color: #a9bdd8;
 
   position: relative;
   overflow: hidden;
@@ -182,6 +185,7 @@ input[type="radio"]:disabled {
 
   .main-intro img {
     margin-top: -56px;
+    height: auto;
   }
 
   .main-intro__wrapper::after {
@@ -206,7 +210,11 @@ input[type="radio"]:disabled {
     width: 458px;
     height: 352px;
 
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+
+        -ms-transform: translate(-50%,-50%);
+
+            transform: translate(-50%,-50%);
 
     background: url(../img/welcome.png) center no-repeat;
   }
@@ -238,13 +246,18 @@ input[type="radio"]:disabled {
 
 /*Оформление большого блока*/
 .block-size__l {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+
+  background-color:  #81b3d2;
 }
 
   .promo-text__l {
     width: 34%;
-    background-color: #81b3d2;
 
     color: #fff;
   }
@@ -286,7 +299,13 @@ input[type="radio"]:disabled {
       top: 48%;
       left: 50%;
 
-      transform: translate(-50%, -50%);
+      height: auto;
+
+      -webkit-transform: translate(-50%, -50%);
+
+          -ms-transform: translate(-50%, -50%);
+
+              transform: translate(-50%, -50%);
     }
    
     
@@ -294,9 +313,14 @@ input[type="radio"]:disabled {
 
 /*Оформление маленького списка*/
 .small-advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   width: 100%;
 
@@ -366,9 +390,14 @@ input[type="radio"]:disabled {
 
 /* Оформление маленьких блоков */
 .block-size__s__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   max-width: 1200px;
   min-width: 768px;
@@ -465,12 +494,18 @@ input[type="radio"]:disabled {
   bottom: 0;
   left: 0;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
   width: 100%;
   min-height: 120px;
+
+  padding-top: 36px;
 
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -482,13 +517,18 @@ input[type="radio"]:disabled {
 
     width: 33.3%;
     margin: 0 auto;
-    margin-top: -4px;
+    margin-top: 10px;
   }
 
   .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
 
     width: 33.33%;
     margin: 0 auto;
@@ -535,7 +575,9 @@ input[type="radio"]:disabled {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
 
         fill: #fff;
       }
@@ -549,15 +591,22 @@ input[type="radio"]:disabled {
 
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
     }
 
   .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 33.33%;
 
     margin: 0 auto;
+    margin-top: -3px;
   }
 
     .copyright span {
@@ -587,8 +636,12 @@ input[type="radio"]:disabled {
 
     /* Страница отелей */
 .filters-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   width: 100%;
   min-height: 217px;
@@ -604,8 +657,11 @@ input[type="radio"]:disabled {
 }
 
 .check-box__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   width: 528px;
 }
@@ -652,25 +708,28 @@ input[type="radio"]:disabled {
     padding: 0 0 11px 3px;
   }
 
-.price-slider-data__wrapper {
-  display: block;
+.price-controls {
   position: relative;
 
   width: 319px;
   height: 36px;
-
   margin-bottom: 20px;
+
+  font-size: 0;
 
   border: 2px solid #fff;
   border-radius: 2px;
 }
 
-  .price-slider-data__wrapper::before {
+  .price-controls::before {
     content: "";
     position: absolute;
 
-    top: 5px;
+    top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
     width: 2px;
     height: 22px;
@@ -678,15 +737,30 @@ input[type="radio"]:disabled {
     background-color: #fff;
   }
 
-  .price-slider-data {
+  .price-controls label {
     display: inline-block;
     vertical-align: middle;
 
-    width: 160px;
-    text-align: center;
+    width: 148px;
+    padding-left: 65px;
 
+    font-size: 14px;
+    
     line-height: 33px;
+    cursor: pointer;
   }
+
+    .price-controls input {
+      width: 50px;
+      height: 32px;
+      margin: 0;
+
+      color: inherit;
+      font: inherit;
+
+      background: none;
+      border: none;
+    }
 
   .price-slider {
     position: relative;
@@ -755,7 +829,11 @@ input[type="radio"]:disabled {
         border: 2px solid #fff;
         border-radius: 2px;
 
-        transform: translateX(-4%);
+        -webkit-transform: translateX(-4%);
+
+            -ms-transform: translateX(-4%);
+
+                transform: translateX(-4%);
         cursor: pointer;
       }
 
@@ -779,12 +857,12 @@ input[type="radio"]:disabled {
   padding-left: 39px;
 }
 
-.filter-list input {
+.filter-checkbox {
   position: absolute;
   opacity: 0;
 }
 
-  .filter-list input + label::before {
+  .filter-checkbox + label::before {
     content: "";
     display: block;
 
@@ -796,21 +874,21 @@ input[type="radio"]:disabled {
     height: 25px;
   }
 
-    .filter-list input + label::before {
+    .filter-checkbox + label::before {
       background: url("../img/checkbox-off.svg") bottom left/23px 23px no-repeat;
     }
 
-    .filter-list input:checked + label::before,
-    .filter-list input:active:not(:disabled) + label::before {
+    .filter-checkbox:checked + label::before,
+    .filter-checkbox:active:not(:disabled) + label::before {
       background: url("../img/checkbox-on.svg") bottom left/27px 23px no-repeat;
     }
 
-    .filter-list input:checked:active:not(:disabled) + label::before {
+    .filter-checkbox:checked:active:not(:disabled) + label::before {
       background: url("../img/checkbox-off.svg") bottom left/23px 23px no-repeat;
   }
 
-    .filter-list input:disabled + label::before,
-    .filter-list input:checked:disabled + label::before {
+    .filter-checkbox:disabled + label::before,
+    .filter-checkbox:checked:disabled + label::before {
       opacity: 0.3;
       pointer-events: none;
       cursor: default;
@@ -818,9 +896,14 @@ input[type="radio"]:disabled {
 
 /* Сортировка */
 .sorting-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 
   width: 1200px;
 
@@ -844,9 +927,14 @@ input[type="radio"]:disabled {
   }
 
   .sorting-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
 
     margin: 0;
     padding: 0;
@@ -861,7 +949,8 @@ input[type="radio"]:disabled {
     }
 
       .sorting-links a {
-        text-decoration: underline dotted #81b3d2;
+        -webkit-text-decoration: underline dotted #81b3d2;
+                text-decoration: underline dotted #81b3d2;
         color: rgba(0, 0, 0, 0.3);
         font-size: 12px;
       }
@@ -883,23 +972,78 @@ input[type="radio"]:disabled {
         cursor: default;
       }
 
-  .sorting-pointers {
-    margin: 0;
-    margin-left: auto;
-    padding: 0;
+      .sorting-pointers {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: 43px;
 
-    width: 35px;
-
-    font-size: 0;
-    line-height: 0;
-  }
-
-    .sorting-pointers {
-      margin: 0;
-      padding: 0;
-
-      list-style: none outside;
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
     }
+        .sorting-pointers li {
+            list-style: none; 
+        }
+    
+        .sorting-pointer {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+
+            margin: 0;
+            padding: 0;
+
+            border: none;
+            line-height: 0;
+            font-size: 0;
+
+            background-color: transparent;
+        }
+        
+        .sorting-pointer::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            vertical-align: middle;
+            top: -8px;
+
+            border: 10px solid #000;
+            opacity: 0.2;
+
+            border-right-width: 5px;
+            border-left-width: 5px;
+            border-right-color: transparent;
+            border-left-color: transparent;
+
+            cursor: pointer;
+        }
+    
+        .sorting-pointer-up::before {
+            border-top-width: 0;
+            left: 9px;
+        }
+    
+        .sorting-pointer-down::before {
+            border-bottom-width: 0;
+            left: -12px;
+        }
+    
+        .sorting-pointer:hover::before,
+        .sorting-pointer:focus::before {
+            outline: none;
+            opacity: 1;
+        }
+    
+        .sorting-pointer:active::before,
+        .sorting-pointer.is-active::before {
+            border-top-color: #81b3d2;
+            border-bottom-color: #81b3d2;
+            opacity: 1;
+        }
 
 /* Список отелей */
 .hotels-list {
@@ -908,8 +1052,12 @@ input[type="radio"]:disabled {
 }
 
 .hotel-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 
   width: 100%;
 
@@ -939,7 +1087,7 @@ input[type="radio"]:disabled {
     content: "";
     position: absolute;
 
-    bottom: -31px;
+    bottom: -29px;
     left: 0;
 
     width: 100%;
@@ -989,6 +1137,8 @@ input[type="radio"]:disabled {
       }
 
     .hotel-description__wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       width: 180px;
 
@@ -1117,7 +1267,11 @@ input[type="radio"]:disabled {
   top: 0;
   left: 50%;
 
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+
+      -ms-transform: translateX(-50%);
+
+          transform: translateX(-50%);
   z-index: 3;
 
   width: 568px;
@@ -1127,14 +1281,18 @@ input[type="radio"]:disabled {
   padding: 55px;
 
   background-color: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 
   font: 700 14px/1.86 "PT Sans", Arial, Helvetica, sans-serif;
 }
 
   .modal-wrapper form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;  
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;  
 
     width: 100%;
 
@@ -1142,9 +1300,15 @@ input[type="radio"]:disabled {
   }
 
 .modal-window p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 
   position: relative;
 
@@ -1153,12 +1317,22 @@ input[type="radio"]:disabled {
   margin: 0;
 }
 
+.date-label {
+  width: 33.3%;
+}
+
+input[type=text]::-ms-clear {  
+  display: none; 
+  width : 0; 
+  height: 0; 
+}
+
 .modal-window input {
   width: 346px;
   height: 38px;
 
   margin-bottom: 29px;
-  padding: 10px 14px;
+  padding: 6px 14px;
 
   background-color: #f2f2f2;
   border: none;
@@ -1167,11 +1341,18 @@ input[type="radio"]:disabled {
   text-transform: uppercase;
 }
 
+.date {
+  min-width: 346px;
+  width: 100%;
+}
+
 .calendar-button {
   position: absolute;
   top: 30%;
   right: 10px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 
   width: 21px;
   height: 22px;
@@ -1205,17 +1386,31 @@ input[type="radio"]:disabled {
     fill: #81b3d2;
   }
 
+  .calendar-button:active div {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
 .count-of-ppl {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   width: 100%;
   margin-top: 1px;
 }
 
   .count-of-ppl div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     
     width: 226px;
   }
@@ -1227,6 +1422,7 @@ input[type="radio"]:disabled {
 
   .count-of-ppl input {
     width: 38px;
+    height: 38px;
     padding: 0;
     margin: 0;
 
@@ -1257,7 +1453,9 @@ input[type="radio"]:disabled {
 
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
 
       height: 2px;
       width: 10px;
@@ -1271,7 +1469,9 @@ input[type="radio"]:disabled {
 
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
 
       height: 10px;
       width: 2px;
