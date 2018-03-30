@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="inner-page">
@@ -20,25 +20,17 @@
 
           <div class="site-navigation">
             <ul class="site-navigation__list">
-              <li class="left-column">
-                <ul>
-                  <li>
-                    <a href="#">Информация</a>
-                  </li>
-                  <li>
-                    <a href="#">Фото и видео</a>
-                  </li>
-                </ul>
+              <li>
+                <a href="#">Информация</a>
               </li>
-              <li class="right-column">
-                <ul>
-                  <li>
-                    <a href="#">Карта штата</a>
-                  </li>
-                  <li>
-                    <a href="hotels.html">Гостиницы</a>
-                  </li>
-                </ul>
+              <li>
+                <a href="#">Фото и видео</a>
+              </li>
+              <li>
+                <a href="#">Карта штата</a>
+              </li>
+              <li>
+                <a href="hotels.html">Гостиницы</a>
               </li>
             </ul>
           </div>
@@ -151,7 +143,7 @@
         <section class="modal-window">
           <h2 class="visually-hidden">Подбор гостиницы</h2>
     
-          <div class="modal-wrapper">
+          <div class="modal-wrapper modal__is-active">
             <form action="https://echo.htmlacademy.ru" method="post">
     
               <p>
@@ -192,15 +184,15 @@
 
         <section class="map__wrapper">
           <h2 class="visually-hidden">Карта</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d296236.1785828579!2d-111.8021665666648!3d34.88189141159478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1520346146285" width="1200" height="593" style="border:0" allowfullscreen></iframe>
           <img class="map-img" src="img/map.jpg" alt="Седона" width="1280" height="747">
+          <iframe class="live-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d296236.1785828579!2d-111.8021665666648!3d34.88189141159478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1520346146285" width="1200" height="593" style="border:0" allowfullscreen></iframe>
         </section>
       </main>
 
       <footer>
         <div class="footer__wrapper">
 
-          <span class="heshteg">#visitsedona</span>
+          <span class="hashtag">#visitsedona</span>
              
           <div class="footer-item">
             <ul class="social">
