@@ -139,6 +139,7 @@ img {
 
     .site-navigation__list a.is-active {
       color: #766357;
+      cursor: default;
     }
 
 /* Лого */
@@ -166,25 +167,22 @@ img {
 
 /* Фото */
 .main-intro__wrapper {
-  width: 100%;
-  height: 509px;
-
-  background-color: #a9bdd8;
-
   position: relative;
-  overflow: hidden;
-}
-
-.main-intro {
   width: 100%;
   height: 508px;
 
+  background-color: #a9bdd8;
   overflow: hidden;
-  margin: 0;
 }
 
-  .main-intro img {
-    margin-top: -56px;
+  .main-photo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+            transform: translateY(-40%);
+
     height: auto;
   }
 
@@ -197,8 +195,8 @@ img {
     width: 100%;
     height: 57px;
 
-    background: url(../img/white-shape.png) center no-repeat;
-    background-size: 1200px 57px;
+    background: url(../img/white-shape.png) bottom no-repeat;
+    background-size: 100%;
   }
 
   .main-intro__wrapper::before {
@@ -206,6 +204,7 @@ img {
     position: absolute;
     top: 49.5%;
     left: 50%;
+    z-index: 3;
 
     width: 458px;
     height: 352px;
@@ -225,7 +224,7 @@ img {
   width: 576px;
   text-align: center;
 
-  margin: 60px auto 43px;
+  margin: 61px auto 43px;
 }
 
 .intro-text > b {
@@ -447,6 +446,7 @@ img {
   min-height: 86px;
 
   margin: 0 auto;
+  padding: 0 6%;
 
   background-color: #766357;
 
@@ -489,10 +489,7 @@ img {
 
 /* Футер */
 .footer__wrapper {
-  position: absolute;
-
-  bottom: 0;
-  left: 0;
+  position: relative;
 
   display: -webkit-box;
 
@@ -505,7 +502,8 @@ img {
   width: 100%;
   min-height: 120px;
 
-  padding-top: 36px;
+  margin-top: -120px;
+  padding: 36px 6%;
 
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -513,24 +511,24 @@ img {
   .heshteg {
     font: 700 21px/1.2 "PT Sans", Arial, Helvetica, sans-serif;
     color: #000;
-    text-align: center;
 
     width: 33.3%;
-    margin: 0 auto;
-    margin-top: 10px;
+    padding: 10px 0 0 60px;
+  }
+
+  .footer-item {
+    width: 33.3%;
+    padding-left: 5px;
   }
 
   .social {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
-    width: 33.33%;
+    width: 156px;
     margin: 0 auto;
     padding: 0;
   }
@@ -542,12 +540,10 @@ img {
       list-style: none outside;
 
       margin-right: 6px;
+      margin-bottom: 6px;
       padding: 0;
     }
 
-    .social li:first-child {
-      margin-left: 5px;
-    }
 
     .social a {
       display: inline-block;
@@ -580,6 +576,18 @@ img {
                 transform: translate(-50%, -50%);
 
         fill: #fff;
+        pointer-events: none;
+      }
+
+      /* Магия для IE */
+      .social-link::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
       }
 
       .social-link:active .social-img {
@@ -600,13 +608,13 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: flex-end;
+        -ms-flex-pack: flex-end;
+            justify-content: flex-end;
     width: 33.33%;
 
-    margin: 0 auto;
     margin-top: -3px;
+    padding-right: 28px;
   }
 
     .copyright span {
@@ -624,6 +632,21 @@ img {
 
       margin-top: 3px;
     }
+
+    /* Магия для IE */
+    .academy-link {
+      position: relative;
+    }
+
+      .academy-link::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
 
     .academy-link:hover .logo-academy-img,
     .academy-link:focus .logo-academy-img {
@@ -1062,12 +1085,16 @@ img {
   width: 100%;
 
   padding: 0;
-  padding: 0 72px;
+  padding: 0 6%;
   margin: 59px 0 30px;
 
   position: relative;
 
   list-style: none outside;
+}
+
+.hotel-item:last-of-type {
+  margin-bottom: 31px;
 }
 
   .hotel-item::before {
@@ -1151,6 +1178,7 @@ img {
 
     .action-buttons {
       width: 100%;
+      font-size: 0;
     }
 
     .hotels-button {
@@ -1160,11 +1188,12 @@ img {
       min-width: 110px;
       height: 27px;
 
-      padding: 0 17px;
-      margin-right: 2px;
+      padding: 0 16px;
+      margin-right: 6px;
 
       color: #fff;
       font-weight: 700;
+      font-size: 14px;
       line-height: 27px;
 
       text-decoration: none;
@@ -1249,20 +1278,97 @@ img {
 /* футер */
 
 .hotels-page .footer__wrapper {
-  position: relative;
+  margin-top: 0;
 }
 
 /* поп-ап */
 .modal-window {
-  display: none;
+  position: relative;
 }
 
-.modal-window__is-active {
-  position: relative;
-  display: block;
+@-webkit-keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes error {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  20% {
+    -webkit-transform: translate(-55%);
+            transform: translate(-55%);
+  }
+  50% {
+    -webkit-transform: translateX(-45%);
+            transform: translateX(-45%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes error {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  20% {
+    -webkit-transform: translate(-55%);
+            transform: translate(-55%);
+  }
+  50% {
+    -webkit-transform: translateX(-45%);
+            transform: translateX(-45%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 .modal-wrapper {
+  display: none;
+
   position: absolute;
   top: 0;
   left: 50%;
@@ -1285,6 +1391,19 @@ img {
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 
   font: 700 14px/1.86 "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+.modal__is-active {
+  display: block;
+
+  -webkit-animation: enter 0.6s;
+
+          animation: enter 0.6s;
+}
+
+.modal-error {
+  -webkit-animation: error 0.2s;
+          animation: error 0.2s;
 }
 
   .modal-wrapper form {
@@ -1335,7 +1454,8 @@ input[type=text]::-ms-clear {
   padding: 6px 14px;
 
   background-color: #f2f2f2;
-  border: none;
+  border: 2px;
+  border-color: #e5e5e5;
 
   font: 700 14px/1.86 "PT Sans", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
@@ -1344,6 +1464,28 @@ input[type=text]::-ms-clear {
 .date {
   min-width: 346px;
   width: 100%;
+}
+
+.date::-webkit-input-placeholder {
+  color: #000;
+}
+.date:-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.date:-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.date:hover {
+  background-color: #ebebeb;
+}
+
+.date:active,
+.date:focus {
+  background-color: #fff;
+  outline: 2px solid #e5e5e5;
 }
 
 .calendar-button {
@@ -1386,7 +1528,7 @@ input[type=text]::-ms-clear {
     fill: #81b3d2;
   }
 
-  .calendar-button:active div {
+  .calendar {
     position: relative;
     top: 0;
     left: 0;
@@ -1495,8 +1637,13 @@ input[type=text]::-ms-clear {
     width: 100%;
     min-height: 58px;
 
-    line-height: 58px;
+    margin-top: 54px;
+
+    line-height: 56px;
     background-color: #81b3d2;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
   }
 
   .send-button:hover,
