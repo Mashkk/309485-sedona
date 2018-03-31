@@ -765,7 +765,7 @@ fieldset {
   content: "";
   display: block;
   position: absolute;
-  top: -5px;
+  top: -7px;
   left: 0;
   width: 29px;
   height: 27px;
@@ -786,7 +786,7 @@ fieldset {
 
 .filter-checkbox+label::before {
   background: url("../img/checkbox-off.svg") 23px 23px no-repeat;
-  background-position: center;
+  background-position: bottom left;
 }
 
 .filter-checkbox:focus+label::after {
@@ -796,12 +796,12 @@ fieldset {
 .filter-checkbox:checked+label::before,
 .filter-checkbox:active:not(:disabled)+label::before {
   background: url("../img/checkbox-on.svg") 27px 23px no-repeat;
-  background-position: center;
+  background-position: bottom left;
 }
 
 .filter-checkbox:checked:active:not(:disabled)+label::before {
   background: url("../img/checkbox-off.svg") 23px 23px no-repeat;
-  background-position: center;
+  background-position: bottom left;
 }
 
 .filter-checkbox:disabled+label::before,
