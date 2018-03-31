@@ -765,7 +765,7 @@ fieldset {
   content: "";
   display: block;
   position: absolute;
-  top: -6px;
+  top: -5px;
   left: 0;
   width: 29px;
   height: 27px;
