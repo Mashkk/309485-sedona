@@ -786,7 +786,7 @@ fieldset {
 
 .filter-checkbox+label::before {
   background: url("../img/checkbox-off.svg") 23px 23px no-repeat;
-  background-position: bottom left;
+  background-position: center;
 }
 
 .filter-checkbox:focus+label::after {
@@ -796,12 +796,12 @@ fieldset {
 .filter-checkbox:checked+label::before,
 .filter-checkbox:active:not(:disabled)+label::before {
   background: url("../img/checkbox-on.svg") 27px 23px no-repeat;
-  background-position: bottom left;
+  background-position: center;
 }
 
 .filter-checkbox:checked:active:not(:disabled)+label::before {
   background: url("../img/checkbox-off.svg") 23px 23px no-repeat;
-  background-position: bottom left;
+  background-position: center;
 }
 
 .filter-checkbox:disabled+label::before,
